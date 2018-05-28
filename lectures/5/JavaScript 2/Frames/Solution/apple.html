@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<style>
+h2 {text-align:center}
+iframe{display:none}
+</style>
+<script>
+function displayAppleBenfits(){	
+document.getElementById("appleframe").style.display = "block";
+}
+</script>
+<title>Apples</title>
+</head>
+<body>
+    <h2>Apples</h2>
+    <p>Apple is low in calories, contains no fat, is inexpensive and available year-round</p>
+
+    <a href="readmoreapple.html" target="readmore" onclick="displayAppleBenfits()"><b>Show Benefits </b></a><br /><br />
+    <iframe name="readmore" src="display.html" width="250" height ="250" align="left" id = "appleframe"></iframe>
+</body>
+</html>

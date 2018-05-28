@@ -1,0 +1,58 @@
+.containerFunc {
+  position: relative;
+  height: 66%;
+  
+}
+
+.containerFunc1 {
+  position: relative;
+  height: 96%;
+  
+}
+
+.imageFunc {
+  display: block;
+  width: 100%;
+  height: 35%;
+}
+
+.imageFunc1 {
+  display: block;
+  width: 100%;
+  height: 27%;
+}
+
+
+.overlayFunc {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 87%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: white;
+}
+
+.containerFunc:hover .overlayFunc {
+  opacity: 0.9;
+}
+
+.containerFunc1:hover .overlayFunc {
+  opacity: 0.9;
+}
+
+.textFunc {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.card-text{
+  height: 80px;
+}

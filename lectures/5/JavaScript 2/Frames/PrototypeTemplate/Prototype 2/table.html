@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<!-- Also read chapter 9 from slides - Regular Expressions -->
+
+<html>
+<head>
+	<title>Table CheckList</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+<body onLoad="hideAll()">
+	<form name="frm">
+	<table id="myTable">
+		<tr>
+			<th></th>
+			<th>STUDENT</th>
+			<th>ADVISOR</th>
+			<th>AWARD<br/>STATUS</th>
+			<th>SEMESTER</th>
+			<th>TYPE</th>
+			<th>BUDGET<br />#</th>
+			<th>PERCENTAGE</th>
+		</tr>
+		<tr id="tr1">
+			<td><input type="checkbox" name="chk1" onclick="changeColor()" /><br><br> <a href="#demo1" data-toggle="collapse"> <img src="down.png"  alt="Random Name" width="25" onclick="dropFunction('drop1')"></a></td>
+			<td>Student 1</td>
+			<td>Teacher 1</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>12345</td>
+			<td>100%</td>
+		</tr>
+		<tr id="drop1" style="display:none;"><td colspan="8">
+		 
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+			
+			
+		</td></tr>
+		<tr id="tr2">
+			<td><input type="checkbox" type="checkbox" name="chk2" onclick="changeColor()" /><br /><br /> <a href="#demo2" data-toggle="collapse"> <img src="down.png" width="25px" onclick="dropFunction('drop2')"/></a></td>
+			<td>Student 2</td>
+			<td>Teacher 2</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>23456</td>
+			<td>100%</td>
+		</tr>
+		<tr id="drop2" style="display:none;"><td colspan="8">
+		
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+			
+		</td></tr>
+		<tr id="tr3">
+			<td><input type="checkbox" type="checkbox" name="chk3" onclick="changeColor()" /><br /><br /> <a href="#demo3" data-toggle="collapse"> <img src="down.png" width="25px" onclick="dropFunction('drop3')"/></a></td>
+			<td>Student 3</td>
+			<td>Teacher 3</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>34567</td>
+			<td>100%</td>
+		</tr>
+		
+		<tr id="drop3" style="display:none;"><td xtArea"colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+			
+		</td></tr>
+	</table>
+	
+	<button id="button">SUBMIT SELECTED AWARDS</button>
+	
+	</form>
+	<br /><br />
+	
+
+	<nav class="socialmediaicons">
+	
+	
+		<p id="kal"></p>	
+		<br>
+	
+	
+		
+	
+	
+	</nav>
+
+	<nav class="socialmediaicons"></nav>
+	<script src="script.js"></script>
+	
+</body>
+</html>

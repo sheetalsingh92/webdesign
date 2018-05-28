@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<style>
+h2 {text-align:center}
+iframe{display:none}
+</style>
+<script>
+function displayOrangeBenfits(){
+document.getElementById("orangeframe").style.display = "block"
+}
+</script>
+<title>Oranges</title>
+</head>
+<body>
+<h2>Orange</h2>
+<p>Oranges are an excellent source of vitamin C. They are also a very good source of dietary fiber. </p>
+<a href="readmoreorange.html" target="readmore" onclick="displayOrangeBenfits()"><b>Show Benefits </b><br /><br />
+<iframe name="readmore" src="display.html" width="250" height ="250" align="left" id = "orangeframe"></iframe>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Feedback</title>
+  <style>
+  label {	float: left;
+			width: 150px;}
+       #container{
+          width: 700px;
+          margin: auto;
+          background-color: beige;
+      } 
+      main{
+          padding: 50px;
+      }
+  </style>
+ </head>
+ <body>
+ <div id="container">
+	 
+	 <main>
+	 <h2>Feeback</h2>
+	 <h3>Love something? Hate something? Let us know!</h3>
+		 Note : Fields marked with an asterisk(*) are mandatory
+		 <br><br>
+		 <form method="post" action="feedbackComplete.html">
+			<label>Title*:</label>
+			<input type="radio" name="title" id="miss" value="miss" required="required"/>Miss
+			<input type="radio" name="title" id="mr" value="mr" required="required"/>Mr.
+			<input type="radio" name="title" id="mrs" value="mrs" required="required"/>Mrs.
+			<br><br>
+			<label for="firstName">First Name*:</label>
+			<input type="text" name="firstName" id="firstName" required="required" placeholder="First Name" onblur="validateInputs(this, 1, 'FName')"/>	
+			<br><br>
+			<div id="errorMsgFName" style="display:none;color:red">
+			Invalid input for your first name. Only text values permitted.
+			<br /><br />
+			</div>
+
+			<label for="lastName">Last Name*:</label>
+			<input type="text" name="lastName" id="lastName" required="required" placeholder="Last Name" onblur="validateInputs(this, 1, 'LName')"/>
+			<br><br>
+			<div id="errorMsgLName" style="display:none;color:red">
+			Invalid input for your last name. Only text values permitted.
+			<br /><br />
+			</div>
+
+			<label for="emailId">Email Id*:</label>
+			<input type="text" name="emailId" id="emailId" required="required" placeholder="yourname@domain.com" onblur="validateInputs(this, 2)"/>
+			<br><br>
+			<div id="errorMsgEmailId" style="display:none;color:red">
+			Invalid input for your email id. Please enter email id in proper format.
+			<br /><br />
+			</div>
+
+			<label for="phoneNumber">Phone Number:</label>
+			<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" onblur="validateInputs(this, 3)"/>
+			<br><br>
+			<div id="errorMsgPhone" style="display:none;color:red">
+			Invalid input for your phone number. Only numerical values permitted and in the requested format xxx-xxx-xxxx.
+			<br /><br />
+			</div>
+
+			<label for="comments">Comments*:</label>
+			<textarea name="text" id="comments" required="required" placeholder="Your comments" rows="5" cols="25"></textarea>
+			<br><br>
+			<input type="Submit">
+			<input type="Reset">
+			<br><br>
+		 </form>
+	 </main>
+ </div>
+
+ <script>
+ function validateInputs(object, type, nameType){
+	 var regExName = /^[a-zA-Z]+$/	 
+	 var regExEmail = /([\w\.]+)@([\w\.]+)\.(\w+)/;
+	 var regExPhone = /\d{3}-?\d{3}-\d{4}$/;
+
+	 var name = 'errorMsg'+nameType;
+
+	 switch(type){
+		 case 1:	if(!object.value.trim().match(regExName))
+					{
+						object.style.border="2px solid red";		
+						document.getElementById(name).style.display="block";
+						object.value = "";
+					}else{
+						object.style.border="";
+						document.getElementById(name).style.display="none";						
+					}
+					break;
+		 case 2:	if(!object.value.match(regExEmail)){
+						object.style.border="2px solid red";						 
+						document.getElementById("errorMsgEmailId").style.display="block";
+						object.value = "";
+					}	
+					else{
+						object.style.border="";
+						document.getElementById("errorMsgEmailId").style.display="none";						
+					}
+					break;
+		 case 3:	if(!object.value.match(regExPhone)){
+						object.style.border="2px solid red";						 
+						document.getElementById("errorMsgPhone").style.display="block";
+						object.value = "";
+					}
+					else{
+						object.style.border="";
+						document.getElementById("errorMsgPhone").style.display="none";						
+					}
+					break;
+	 }
+
+ }
+ </script>
+
+ </body>
+</html>

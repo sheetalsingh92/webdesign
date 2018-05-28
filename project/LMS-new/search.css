@@ -1,0 +1,87 @@
+.filter-and-sort{
+    margin-top: 10px;
+}
+.filter{
+    width: 10%; 
+    float: left;
+}
+.filter button{
+    font-size: 15px;
+}
+#price, #level{
+    width: 8%;
+}
+
+#sortby{
+    float: right;
+    margin-right: 100px;
+}
+
+.dropdown-menu ul{
+    list-style-type: none;
+    padding-right: 10px;
+}
+
+#title{
+    text-align: left;
+    margin-top:100px;
+}
+
+#course-list{
+    margin-top:80px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 80%;
+}
+
+.search-course{
+    margin-top: 20px;
+}
+
+.course-img{
+    float: left;
+}
+
+.course-title{
+    color: black;
+    font-size: 18px;
+}
+
+.course-desc{
+    float: left;
+    margin-top: 10px;
+}
+
+.badge{
+    margin-left: 5px;
+    background-color: orange;
+}
+
+.course-details,.course-rate{
+    font-size: 12px;
+    color: #808080;
+}
+.course-detail{
+    margin-right: 20px;
+}
+.course-rate{
+    margin-top: 5px;
+}
+.course-rate span{
+    color: orange;
+}
+.instructor{
+    font-size: 12px;
+    color: #808080;
+}
+.pagination{
+    margin-top: 50px;
+    margin-left: 38%;
+    margin-right: auto;
+    color: #2d2d30;
+}
+.page-item a{
+    background-color: #2d2d30;
+    color: white;
+}
+
